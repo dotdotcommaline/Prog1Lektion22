@@ -73,7 +73,7 @@ public class Company {
     // -----------------------------------------------------------------------------
 
     /**
-     * Returns the count of employees in this company.
+     * Returns if employees list is not empty
      */
     public boolean hasEmployees() {
         return !employees.isEmpty();

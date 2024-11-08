@@ -3,6 +3,7 @@ package opgave01.application.model;
 public class Employee {
     private String name;
     private int wage; // hourly wage
+    private int employmentYear;
 
     // link to company class (--> 0..1)
     private Company company;
@@ -12,9 +13,10 @@ public class Employee {
      * @param name name of the employee
      * @param wage hourly wage of the employee
      */
-    public Employee(String name, int wage) {
+    public Employee(String name, int wage, int employmentYear) {
         this.name = name;
         this.wage = wage;
+        this.employmentYear = employmentYear;
     }
 
     public String getName() {
@@ -40,6 +42,14 @@ public class Employee {
 
     public Company getCompany() {
         return company;
+    }
+
+    public int getEmploymentYear() {
+        return employmentYear;
+    }
+
+    public void setEmploymentYear(int employmentYear) {
+        this.employmentYear = employmentYear;
     }
 
     /**

@@ -54,8 +54,8 @@ public class Controller {
      * Creates a new employee.<br />
      * Requires: wage >= 0.
      */
-    public static Employee createEmployee(String name, int wage) {
-        Employee employee = new Employee(name, wage);
+    public static Employee createEmployee(String name, int wage, int employmentYear) {
+        Employee employee = new Employee(name, wage, employmentYear);
         Storage.addEmployee(employee);
         return employee;
     }
@@ -64,8 +64,8 @@ public class Controller {
      * Creates a new employee.<br />
      * Requires: wage >= 0, company!=null.
      */
-    public static Employee createEmployee(String name, int wage, Company company) {
-        Employee employee = createEmployee(name, wage);
+    public static Employee createEmployee(String name, int wage, Company company, int employmentYear) {
+        Employee employee = createEmployee(name, wage, employmentYear);
         company.addEmployee(employee);
         return employee;
     }
@@ -85,9 +85,10 @@ public class Controller {
      * Updates the employee.<br />
      * Requires: wage >= 0.
      */
-    public static void updateEmployee(Employee employee, String name, int wage) {
+    public static void updateEmployee(Employee employee, String name, int wage, int employmentYear) {
         employee.setName(name);
         employee.setWage(wage);
+        employee.setEmploymentYear(employmentYear);
     }
 
     /**

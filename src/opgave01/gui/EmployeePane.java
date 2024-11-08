@@ -18,6 +18,7 @@ public class EmployeePane extends GridPane {
     private TextField companyTextField;
     private TextField salaryTextField;
     private ListView<Employee> employeesListView;
+    private TextField employmentYear;
 
     public EmployeePane() {
         this.setPadding(new Insets(20));
@@ -59,6 +60,12 @@ public class EmployeePane extends GridPane {
         salaryTextField = new TextField();
         this.add(salaryTextField, 2, 4);
         salaryTextField.setEditable(false);
+
+        this.add(new Label("Employment year:"), 1 , 5);
+
+        employmentYear = new TextField();
+        this.add(employmentYear, 2, 5);
+        employmentYear.setEditable(false);
 
         HBox hboxButtons = new HBox(40);
         this.add(hboxButtons, 0, 6, 3, 1);
@@ -135,6 +142,7 @@ public class EmployeePane extends GridPane {
         if (employee != null) {
             nameTextField.setText(employee.getName());
             wageTextField.setText("kr " + employee.getWage());
+            employmentYear.setText("" + employee.getEmploymentYear());
             if (employee.getCompany() != null) {
                 companyTextField.setText("" + employee.getCompany());
                 salaryTextField.setText("kr " + employee.weeklySalary());
@@ -145,6 +153,7 @@ public class EmployeePane extends GridPane {
         } else {
             nameTextField.clear();
             wageTextField.clear();
+            employmentYear.clear();
             companyTextField.clear();
             salaryTextField.clear();
         }

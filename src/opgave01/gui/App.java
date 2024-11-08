@@ -18,10 +18,10 @@ public class App {
         Controller.createCompany("NVIDIA", 45);
         Controller.createCompany("GOOGLE", 32);
 
-        Controller.createEmployee("Bob Dole", 210, amd);
-        Controller.createEmployee("Alice Schmidt", 250, ibm);
-        Controller.createEmployee("George Down", 150, amd);
+        Controller.createEmployee("Bob Dole", 210, amd, 1001);
+        Controller.createEmployee("Alice Schmidt", 250, ibm, 1002);
+        Controller.createEmployee("George Down", 150, amd, 1003);
 
-        Controller.createEmployee("Rita Uphill", 300);
+        Controller.createEmployee("Rita Uphill", 300, 1004);
     }
 }
